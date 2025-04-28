@@ -1,0 +1,58 @@
+.loader-container {
+    background-color: var(--orange95-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /
+}
+.loader-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+.loader {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book {
+    width: 150px;
+    height: 13px;
+    background-color: var(--orange65-color);
+    border-bottom: 2px solid var(--gray15-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.page {
+    width: 50%;
+    height: 2px;
+    background-color: var(--orange65-color);
+    animation: paging 0.7s ease-out infinite;
+    transform-origin: left;
+}
+
+.page2 {
+    width: 50%;
+    height: 2px;
+    background-color: var(--orange65-color);
+    animation: paging 0.8s ease-out infinite;
+    transform-origin: left;
+    position: absolute;
+}
+
+@keyframes paging {
+    10% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(-180deg);
+    }
+}

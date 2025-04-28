@@ -1,0 +1,17 @@
+.testimonials-section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+@media (max-width: 1919px) {
+    .testimonials-section-container{
+        gap: 80px;
+    }
+}
+@media (max-width: 540px) {
+    .testimonials-section-container{
+        gap: 40px;
+    }   
+}

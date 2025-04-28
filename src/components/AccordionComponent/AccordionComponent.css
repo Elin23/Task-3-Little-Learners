@@ -1,0 +1,111 @@
+.accordion-container {
+    background-color: var(--orange95-color);
+    border: 2px solid var(--gray15-color);
+    padding: 34px;
+    border-radius: 12px;
+}
+
+.accordion-title {
+    font-weight: 600;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.accordion-icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid var(--gray15-color);
+    background-color: var(--orange97-color);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.accordion-icon-container img {
+    width: 16px;
+}
+.accordion-container.open{
+    background-color: var(--white-color);
+}
+.accordion-content{
+    height: 0;
+    opacity: 0;
+    padding-right: 75px;
+}
+.accordion-container.open .accordion-content {
+    height: fit-content; 
+    opacity: 1;
+    padding-top: 24px;
+}
+.accordion-container.open .accordion-title{
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--gray15-color);
+}
+@media (max-width: 1919px) {
+    .accordion-container {
+        padding: 34px 30px;
+        border-radius: 10px;
+    }
+    .accordion-header {
+        gap: 24px;
+    }
+    .accordion-icon-container {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        padding: 6px;
+    }
+    .accordion-content{
+        padding-right: 50px;
+    }
+    .accordion-container.open .accordion-content {
+        padding-top: 20px;
+    }
+    .accordion-container.open .accordion-title{
+        padding-bottom: 20px;
+    }
+   
+}
+@media (max-width: 992px) {
+    .accordion-container {
+        width: 100%;
+    }
+}
+@media (max-width: 540px) {
+    .accordion-container {
+        padding: 30px 24px;
+    }
+    .accordion-header {
+        gap: 10px;
+    }
+    
+    .accordion-icon-container {
+        border-radius: 4px;
+        padding: 6px;
+    }
+    .accordion-content{
+        padding-right: 0;
+    }
+    .accordion-container.open .accordion-content {
+        padding-top: 24px;
+    }
+    .accordion-container.open .accordion-title{
+        padding-bottom: 24px;
+    }  
+}
+@media (max-width: 389px) {
+    .accordion-container {
+        padding: 30px 18px;
+    }
+    .accordion-title{
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,122 @@
+.base-container{
+    background-color: var(--white-color);
+    border: 2px solid var(--gray15-color);
+    box-shadow: 6px 6px 0px 2px var(--gray5-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.base-container.benefit-card{
+    position: relative;
+    height: 306px;
+    padding: 0 50px;
+}
+.base-container.testimonial{
+    padding: 50px;
+    width: 22.14vw;
+}
+.base-container.navigation{
+    padding: 80px;
+    width: 48.39%;
+    gap: 80px
+}
+.base-container.learn-more-btn{
+    padding: 18px 0;
+    background-color: var(--orange90-color);
+}
+.base-container.learn-more-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.base-container.footer{
+    padding: 100px 113px 40px 113px;
+}
+@media (max-width: 1919px) {
+    .base-container{
+        box-shadow: 4px 4px 0px 2px var(--gray5-color);
+        border-radius: 10px;
+    }
+    .base-container.benefit-card{
+        height: 243px;
+        padding: 0 40px;
+    }
+    .base-container.testimonial{
+        padding: 40px;
+        width: 23.61vw;
+    }
+    .base-container.navigation{
+        padding: 60px;
+        gap: 60px
+    }
+    .base-container.footer{
+        padding: 80px 80px 40px 80px;
+    }
+}
+@media (max-width: 1439px) {
+    .base-container.benefit-card{
+        height: 250px;
+        padding: 0 20px;
+    }
+    .base-container.navigation{
+        padding: 40px 25px;
+    }
+}
+@media (max-width: 1200px) {
+    .base-container.benefit-card{
+        width: 48%;
+        height: 250px;
+        padding: 0 30px;
+    }
+    .base-container.navigation{
+        padding: 40px 25px;
+    }
+    .base-container.testimonial{
+        width: 33vw;
+    }
+}
+@media (max-width: 992px) {
+    .base-container.navigation{
+        width: 100%;
+        padding: 34px 30px;
+    }
+    .base-container.benefit-card{
+        width: 100%;
+        padding: 0 40px;
+    }
+    .base-container.footer{
+        padding: 90px 60px 30px 60px;
+    }
+    .base-container.testimonial{
+        padding: 30px;
+        width: 88vw;
+       
+    }
+}
+@media (max-width: 540px) {
+    .base-container.benefit-card{
+        height: 221px;
+        padding: 0 30px;
+    }
+    .base-container.testimonial{
+        width: 91vw;
+    }
+    .base-container.navigation{
+        padding: 40px;
+        gap: 40px;
+        box-shadow: 2px 2px 0px 1px var(--gray5-color);
+    }
+    .base-container.footer{
+        padding: 60px 30px 30px 30px;
+    }
+}
+@media (max-width: 389px) {
+    .base-container.benefit-card{
+        height: 200px;
+        padding: 0 20px;
+    }
+    .base-container.navigation{
+        padding: 30px 20px;
+        gap: 40px;
+    }
+}

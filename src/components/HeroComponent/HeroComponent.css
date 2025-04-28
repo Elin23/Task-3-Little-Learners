@@ -1,0 +1,144 @@
+.main-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.125%;
+    padding-top: 4.167%;
+}
+
+.greeting {
+    border-bottom: 2px solid var(--gray15-color);
+    padding-bottom: 6px;
+}
+
+.hero-heading {
+    font-family: var(--headings-font-family);
+    margin-bottom: 30px;
+}
+
+.highlighted {
+    color: var(--orange65-color);
+}
+
+.hero-paragraph {
+    margin-bottom: 60px;
+}
+
+@media(max-width: 1919px) {
+    .main-hero-container {
+        gap: 3.472%;
+        padding-top: 4.167%;
+        /* height: calc(100vh + 70px); */
+    }
+
+    .hero-main-img img {
+        width: 615px;
+        height: 663px;
+    }
+
+    .hero-heading {
+        margin-bottom: 20px;
+    }
+
+    .hero-paragraph {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 1439px) {
+    .main-hero-container {
+        gap: 3%;
+    }
+
+    .hero-heading {
+        font-size: 40px;
+    }
+
+    .hero-main-img img {
+        width: 550px;
+        height: 550px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-hero-container {
+        gap: 3%;
+    }
+
+    .hero-heading {
+        font-size: 30px;
+        padding-top: 3px;
+    }
+
+    .greeting {
+        font-size: 18px;
+    }
+
+    .hero-paragraph {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 992px) {
+    .main-hero-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hero-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-hero-container {
+        gap: 4%;
+    }
+
+    .hero-heading {
+        font-size: 40px;
+        padding-top: 3px;
+    }
+
+    .greeting {
+        font-size: 22px;
+    }
+
+    .hero-paragraph {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-main-img img {
+        width: 100%;
+        height: 410px;
+    }
+    .greeting{
+        font-size: 16px;
+    }
+    .hero-heading {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+    .hero-paragraph{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 389px) {
+    .hero-main-img img {
+        height: 380px;
+    }
+    .greeting{
+        font-size: 14px;
+    }
+    .hero-heading {
+        font-size: 24px;
+    }
+    .hero-paragraph{
+        margin-bottom: 30px;
+    }
+}

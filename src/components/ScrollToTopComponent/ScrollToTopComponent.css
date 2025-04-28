@@ -1,0 +1,20 @@
+.scroll-to-top {
+    width: 35px;
+    height: 35px;
+    background-color: var(--white-color);
+    border: 2px solid var(--gray15-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    right: 8px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 999;
+}
+
+.scroll-to-top img {
+    height: 15px;
+}

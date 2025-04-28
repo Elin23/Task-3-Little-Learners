@@ -1,0 +1,32 @@
+.faq-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    column-gap: 50px;
+}
+.faq-cards div.column-cards{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+}
+@media (max-width: 1919px) {
+    .faq-cards{
+        column-gap: 40px;
+    }
+}
+@media (max-width: 1200px) {
+    .faq-cards{
+        column-gap: 30px;
+    }
+}
+@media (max-width: 992px){
+    .faq-cards{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .faq-cards div.column-cards{
+        gap: 20px;
+    }
+}
