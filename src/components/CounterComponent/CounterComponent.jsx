@@ -17,19 +17,20 @@ function CounterBox({ count, label }) {
   const [currentCount, setCurrentCount] = useState(0);
 
   useEffect(() => {
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+    // IntersectionObserver used to detect when the counter box becomes visible on screen
+    let visibilityObserver = new IntersectionObserver((items) => {
+      items.forEach((item) => {
+        if (item.isIntersecting) {
           startCounting();
         }
       });
     });
 
     if (ref.current) {
-      observer.observe(ref.current);
+      visibilityObserver.observe(ref.current);
     }
 
-    return () => observer.disconnect();
+    return () => visibilityObserver.disconnect();
   }, []);
 
   const startCounting = () => {

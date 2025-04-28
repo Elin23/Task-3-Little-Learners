@@ -6,9 +6,9 @@ export default function AdComponent({text, icon}) {
   useEffect(()=>{
     const handleIsScrolled= () =>{
       if(window.scrollY > 50){
-        setIsVisible(false);
+        setIsVisible(false); // Hide the ad in scrolling down more than 50px
       }else{
-        setIsVisible(true);
+        setIsVisible(true); 
       }
     };
     window.addEventListener('scroll', handleIsScrolled);
