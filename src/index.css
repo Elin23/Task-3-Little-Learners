@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --white-color: #fff;
   --black-color: black;
@@ -22,168 +23,255 @@
 
   --orange97-color: #FFF5F0;
   --orange95-color: #FFEFE5;
-  --orange90-color:#FFDECC;
+  --orange90-color: #FFDECC;
   --orange80-color: #FFBE99;
   --orange75-color: #FFAE80;
   --orange65-color: #FF8D4D;
 
   --headings-font-family: "Raleway", sans-serif;
 }
-body{
-  background-color: var(--orange97-color);
-  font-family: "Outfit", sans-serif; /* The default font for most site elements is 'Outfit',
-                                        except for headings which have their own font set in their
-                                        respective styles */
 
+body {
+  background-color: var(--orange97-color);
+  font-family: "Outfit", sans-serif;
+  /* The default font for most site elements is 'Outfit',
+    except for headings which have their own font set in their respective styles */
 }
-a{
+
+a {
   text-decoration: none;
 }
-ul{
+
+ul {
   list-style: none;
 }
+
 /* Start Scrollbar Customization */
 ::-webkit-scrollbar {
-  width: 12px; 
-  height: 15px; 
+  width: 12px;
+  height: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--orange97-color); 
+  background: var(--orange97-color);
   border: 1px solid var(--gray15-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, var(--orange65-color),var(--orange75-color), var(--orange80-color));
+  background: linear-gradient(to bottom, var(--orange65-color), var(--orange75-color), var(--orange80-color));
   border: 1px solid var(--gray15-color);
 }
-/* End Scrollbar Customization */
 
-.mx-50{
+/* End Scrollbar Customization */
+/* start Fade Effect */
+
+.fading {
+  transition: opacity 350ms ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* End Fade Effect */
+
+.mx-50 {
   margin-left: 2.604%;
   margin-right: 2.604%;
 }
-.mx-162{
+
+.mx-162 {
   margin-left: 8.4375%;
   margin-right: 8.4375%;
 }
-.mt-200{
+
+.mt-200 {
   margin-top: 10.417%;
 }
-.mt-100{
+
+.mt-100 {
   margin-top: 5.2083%;
 }
-.fs-20{
+
+.fs-20 {
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 150%;
 }
-.fs-22{
+
+.fs-22 {
   font-size: 1.375rem;
   line-height: 150%;
 }
-.fs-28{
+
+.fs-28 {
   font-weight: 700;
   font-size: 1.75rem;
   line-height: 130%;
 }
-.fs-58{
+
+.fs-30 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 150%;
+}
+
+.fs-34 {
+  font-family: var(--headings-font-family);
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 130%;
+}
+
+.fs-58 {
   font-weight: 700;
   font-size: 3.625rem;
   line-height: 130%;
 }
-.fs-54{
+
+.fs-54 {
   font-weight: 800;
   font-size: 3.375rem;
   line-height: 130%;
 }
-.fs-44{
+
+.fs-68 {
+  font-weight: 700;
+  font-size: 4.25rem;
+  line-height: 130%;
+}
+
+.fs-44 {
   font-weight: 800;
   font-size: 2.75rem;
   line-height: 150%;
 }
-.fs-18{
+
+.fs-18 {
   font-size: 1.125rem;
   line-height: 150%;
 }
-.fs-24{
+
+.fs-24 {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 150%;
 }
-.fs-48{
+
+.fs-48 {
   font-weight: 700;
   font-size: 3rem;
   line-height: 130%;
 }
+
 /*Start Responsive*/
 @media (max-width: 1919px) {
-  
-  .mx-50{
+
+  .mx-50 {
     margin-left: 3.472%;
     margin-right: 3.472%;
   }
-  .mx-162{ 
+
+  .mx-162 {
     margin-left: 5.556%;
     margin-right: 5.556%;
   }
-  .mt-200{
+
+  .mt-200 {
     margin-top: 10.42%;
   }
-  .mt-100{
+
+  .mt-100 {
     margin-top: 6.944%;
   }
-  .fs-20{
+
+  .fs-20 {
     font-size: 1rem;
   }
-  .fs-22{
+
+  .fs-22 {
     font-size: 1.125rem;
   }
-  .fs-28{
+
+  .fs-28 {
     font-size: 1.5rem;
   }
-  .fs-58{
+
+  .fs-58 {
     font-size: 3rem;
   }
-  .fs-54{
+
+  .fs-54 {
     font-size: 2.5rem;
   }
-  .fs-44, 
-  .fs-48{
+
+  .fs-44,
+  .fs-48 {
     font-size: 2.125rem;
   }
-  .fs-18{
+
+  .fs-18 {
     font-size: 1rem;
   }
-  .fs-24{
+
+  .fs-24 {
     font-size: 1.25rem;
+  }
+
+  .fs-30 {
+    font-size: 1.5rem;
+  }
+  .fs-34 {
+    font-size: 2.125rem;
+  }
+  .fs-68 {
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 540px) {
+
   .mx-50,
-  .mx-162{
+  .mx-162 {
     margin-left: 4.1026%;
     margin-right: 4.1026%;
   }
-  .mt-200{
+
+  .mt-200 {
     margin-top: 22.348%;
   }
-  .mt-100{
+
+  .mt-100 {
     margin-top: 12.821%;
   }
-  .fs-28{
+
+  .fs-28 {
     font-size: 1.375rem;
   }
-  .fs-58{
+
+  .fs-58 {
     font-size: 2.375rem;
   }
-  .fs-54{
+
+  .fs-54 {
     font-size: 1.875rem;
   }
-  .fs-48{
+
+  .fs-48 {
     font-size: 1.75rem;
   }
+
+  .fs-30 {
+    font-size: 1.25rem;
+  }
+  .fs-34 {
+    font-size: 1.75rem;
+  }
+  .fs-68 {
+    font-size: 2.375rem;
+  }
 }
-
-

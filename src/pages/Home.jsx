@@ -6,7 +6,7 @@ import FaqComponent from '../components/FaqComponent/FaqComponent'
 import NavigateSectionComponent from '../components/NavigateSectionComponent/NavigateSectionComponent'
 export default function Home() {
   return (
-    <div>
+    <main>
       <HeroComponent main_img={'/assets/imgs/ImageContainer.png'}
                      title={'Welcome to Little Learners Academy'} heading={'Where Young Minds Blossom and '}
                      highlighted={'Dreams Take Flight.'}
@@ -16,6 +16,6 @@ export default function Home() {
       <TestimonialsSectionComponent/>
       <FaqComponent/>
       <NavigateSectionComponent/>
-    </div>
+    </main>
   )
 }

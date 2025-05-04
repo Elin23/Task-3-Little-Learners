@@ -1,71 +1,83 @@
-import React, { useEffect, useState } from 'react';
-import './SliderComponent.css';
+import { useState } from "react";
+import "./SliderComponent.css";
+import useResponsiveSlides from "../../hooks/useResponsiveSlides";
 
-export default function SliderComponent({ children }) {
-  const [position, setPosition] = useState(0);
-  const [displayedCards, setDisplayedCards] = useState(3); 
-  const totalCards = children.length;
+const SliderComponent = ({ children, className = "", label = "", sideContent = null }) => {
+  const breakpoints =
+    className === "gallery"
+      ? { x_small: 1, small: 2, medium: 3, large: 4 }
+      : { x_small: 1, small: 1, medium: 2, large: 3 };
 
-  // Update the number of displayed cards when the screen is resized
-  const updateCards = () => {
-    const width = window.innerWidth;
-    if (width >= 1200) {
-      setDisplayedCards(3); 
-    } else if (width >= 992) {
-      setDisplayedCards(2); 
-    } else {
-      setDisplayedCards(1); 
+  // note: I used useResponsiveSlides instead of window.innerWidth because it's more accurate.
+  // It watches the screen size directly and updates the number of cards to show based on that.
+  const cardsPerSlide = useResponsiveSlides({ breakpoints })
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalChildren = children.length;
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + cardsPerSlide) % totalChildren);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prev) => (prev - cardsPerSlide + totalChildren) % totalChildren
+    );
+  };
+
+  // get the cards that should be visible in the current view
+  const getVisibleCards = () => {
+    const visible = [];
+    for (let i = 0; i < cardsPerSlide; i++) {
+      const index = (currentIndex + i) % totalChildren;
+      visible.push(children[index]);
     }
+    return visible;
   };
-  useEffect(() => {
-    updateCards(); 
-    window.addEventListener('resize', updateCards); 
-    return () => {
-      window.removeEventListener('resize', updateCards); 
-    };
-  }, []);
-
-  const handleNext = () => {
-    setPosition((prev) => (prev + displayedCards) % totalCards);
-  };
-
-  const handlePrev = () => {
-    setPosition((prev) => (prev - displayedCards + totalCards) % totalCards); 
-  };
-
- // get the visible cards based on current position
-  const visibleCards = [
-    ...children.slice(-position), // slice the last position 
-    ...children.slice(0, totalCards - position),
-  ];
 
   return (
-    <div className="main-slider-container">
-
-      <button className="left-arrow" onClick={handlePrev}>
-        <img src="/assets/icons/slider_left_arrow.svg" alt="left arrow" />
-      </button>
-
+    <div
+      className={`slider-section ${["awards", "gallery"].includes(className) ? "show-label" : ""}`}>
       <div className="slider-wrapper">
-        {visibleCards.slice(0, displayedCards).map((card, index) => (
-          <div className="slider-card" key={index}>
-            {card}
+        <div className="desktop-btns">
+          <button className="slider-btn" onClick={prevSlide}>
+            <img src="/assets/icons/slider_left_arrow.svg" alt="Previous" />
+          </button>
+        </div>
+
+        <div className={`slider-container ${className == "gallery" ? "gallery" : ""}`}>
+          <div className={`slides ${className}`}>
+            {getVisibleCards()}
           </div>
-        ))}
-      </div>
 
-      <button className="right-arrow" onClick={handleNext}>
-        <img src="/assets/icons/slider_right_arrow.svg" alt="right arrow" />
-      </button>
+          <div className="btns-container">
+            {/* Optional button next to slider */}
+            {label && <button className="more-cards fs-18">{label}</button>}
+            {/* Optional title next to slider */}
+            {sideContent && <div className="side-content-title fs-34">{sideContent.title}</div>}
 
-      <div className="mobile-buttons">
-        <button className="left-arrow-mobile" onClick={handlePrev}>
-          <img src="/assets/icons/slider_left_arrow.svg" alt="left arrow" />
-        </button>
-        <button className="right-arrow-mobile" onClick={handleNext}>
-          <img src="/assets/icons/slider_right_arrow.svg" alt="right arrow" />
-        </button>
+            <div className="mobile-btns">
+              <button className="slider-btn" onClick={prevSlide}>
+                <img src="/assets/icons/slider_left_arrow.svg" alt="Previous" />
+              </button>
+              <button className="slider-btn" onClick={nextSlide}>
+                <img src="/assets/icons/slider_right_arrow.svg" alt="Next" />
+              </button>
+            </div>
+          </div>
+          {/* Optional description under the slider */}
+          {sideContent && <p className="side-content-desc fs-20">{sideContent.desc}</p>}
+        </div>
+
+        <div className="desktop-btns">
+          <button className="slider-btn" onClick={nextSlide}>
+            <img src="/assets/icons/slider_right_arrow.svg" alt="Next" />
+          </button>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default SliderComponent;
+

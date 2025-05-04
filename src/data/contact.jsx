@@ -1,5 +1,3 @@
-import { href } from "react-router-dom"
-
 export const contact = [
     {
         icon: "/assets/icons/envelope.svg",

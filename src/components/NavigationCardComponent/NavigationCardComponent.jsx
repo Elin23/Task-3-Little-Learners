@@ -5,7 +5,7 @@ import BaseContainerComponent from '../BaseContainerComponent/BaseContainerCompo
 export default function NavigationCardComponent({ link, key }) {
     return (
         <>
-            <BaseContainerComponent className={"navigation"}>
+            <BaseContainerComponent className={"navigation"} data_aos={"fade"}>
                 <div className="nav-card-content" key={key}>
                     <div className="nav-card-head">
                         <div className="nav-card-title fs-48">{link.labelNav}</div>

@@ -1,0 +1,17 @@
+.learning-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+@media (max-width: 1919px) {
+    .learning-cards{
+        gap: 40px;
+    }
+}
+@media (max-width: 1200px) {
+    .learning-cards{
+        gap: 30px;
+    }
+}

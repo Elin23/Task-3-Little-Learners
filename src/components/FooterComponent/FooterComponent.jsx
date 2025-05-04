@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function FooterComponent({ logo, text, contact, navbarLinks, footerLinks, social }) {
     const displayedLinks = navbarLinks.filter(link => link.labelFooter);
     return (
-        <div className='footer-container mx-50 mt-200'>
+        <div className='footer-container mx-50 mt-200' data-aos="fade">
             <BaseContainerComponent className='footer'>
                 <div className="footer-content">
                     <div className="footer-info">
@@ -17,7 +17,7 @@ export default function FooterComponent({ logo, text, contact, navbarLinks, foot
                             <ul className='contact-list'>
                                 {contact.map((item, index) => (
                                     <li className="contact-item" key={index}>
-                                        <div className="contact-icon">
+                                        <div className="contact-icon" data-aos="flip-left">
                                             <img src={item.icon} alt={item.alt} />
                                         </div>
                                         <a className='fs-20' href={item.href}>{item.value}</a>
@@ -53,7 +53,7 @@ export default function FooterComponent({ logo, text, contact, navbarLinks, foot
                     </ul>
                     <ul className="social-links">
                         {social.map((item, index) => (
-                            <li className='fs-18' key={index}><a href={item.link}><img src={item.logo} alt={item.name} /></a></li>
+                            <li className='fs-18' key={index} data-aos="flip-left"><a href={item.link}><img src={item.logo} alt={item.name} /></a></li>
                         ))}
                     </ul>
                 </div>

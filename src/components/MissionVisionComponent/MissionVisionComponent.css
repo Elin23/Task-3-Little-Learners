@@ -1,0 +1,15 @@
+.MV-cards{
+    display: flex;
+    gap: 60px;
+}
+@media (max-width: 1919px) {
+    .MV-cards{
+        gap: 40px;
+    }
+}
+@media (max-width: 992px) {
+    .MV-cards{
+        gap: 30px;
+        flex-direction: column;
+    }
+}

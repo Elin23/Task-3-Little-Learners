@@ -4,7 +4,7 @@ import BaseContainerComponent from '../BaseContainerComponent/BaseContainerCompo
 
 export default function TestimonialCardComponent({ name, text, rate, avatar }) {
     return (
-        <BaseContainerComponent className='testimonial'>
+        <BaseContainerComponent className='testimonial' data_aos={"zoom-in-up"}>
             <div className="testimonial-card">
                 <div className="avatar-info">
                     <div className="avatar-img-container">

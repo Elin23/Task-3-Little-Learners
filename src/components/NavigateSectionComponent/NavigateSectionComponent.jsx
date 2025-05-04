@@ -7,7 +7,7 @@ import NavigationCardComponent from '../NavigationCardComponent/NavigationCardCo
 export default function NavigateSectionComponent() {
     const navigationLinks = navLinks.filter(link => link.description);
     return (
-        <div className='navigation-container mx-162'>
+        <div className='navigation-container mx-162' id='navigate'>
             <TitleComponent
                 heading={"Explore More"}
                 title={"Navigate through our Pages"}

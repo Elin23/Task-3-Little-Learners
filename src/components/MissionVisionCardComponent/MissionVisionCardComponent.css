@@ -1,0 +1,29 @@
+.MV-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MV-header h4{
+    font-family: var(--headings-font-family);
+}
+.MV-description{
+    color: var(--gray20-color);
+}
+@media (max-width: 1919px) {
+    .MV-header img{
+        width: 60.43px;
+        height: 60px;
+        object-fit: contain;
+    }
+}
+@media (max-width: 540px) {
+    .MV-header img{
+        width: 50.63px;
+        height: 50px;
+    }
+}
+@media (max-width: 389px) {
+    .MV-description{
+        font-size: 14px;
+    }
+}

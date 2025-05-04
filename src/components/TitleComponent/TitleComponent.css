@@ -73,13 +73,16 @@
         padding: 8px 14px;
     }
 }
+@media (max-width: 992px) {
+    .section-text{
+        width: 100% !important;
+    }
+}
 @media (max-width: 540px) {
     .title-container{
         gap: 10px;
     }
-    .section-text{
-        width: 100%;
-    }
+    
 }
 @keyframes left-move {
     50% {

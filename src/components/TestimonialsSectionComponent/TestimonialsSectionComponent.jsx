@@ -6,7 +6,7 @@ import TestimonialCardComponent from '../TestimonialCardComponent/TestimonialCar
 import './TestimonialsSectionComponent.css'
 export default function TestimonialsSectionComponent() {
   return (
-    <div className='testimonials-section-container mx-162'>
+    <div className='testimonials-section-container mx-162' id='testimonials'>
       <TitleComponent heading={"Their Happy Words 🤗"}
                       title={"Our Testimonials"}
                       text={"Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally."}/>

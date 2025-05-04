@@ -11,6 +11,9 @@ import { footerLinks, navLinks } from './data/linksData'
 import ScrollToTopComponent from './components/ScrollToTopComponent/ScrollToTopComponent'
 import FooterComponent from './components/FooterComponent/FooterComponent'
 import { contact, socialMedia } from './data/contact'
+import About from './pages/About'
+import Academics from './pages/Academics'
+import CouponPopupComponent from './components/CouponPopupComponent/CouponPopupComponent'
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -38,8 +41,8 @@ function App() {
           <NavbarComponent links={navLinks} logo={'/assets/imgs/logo.png'} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<Home />} />
-            <Route path="/academics" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/academics" element={<Academics />} />
             <Route path="/admissions" element={<Home />} />
             <Route path="/student-life" element={<Home />} />
             <Route path="/contact" element={<Home />} />
@@ -51,13 +54,17 @@ function App() {
               These routes are placeholders for future pages. */}
           </Routes>
           <ScrollToTopComponent />
-          <FooterComponent logo={'/assets/imgs/logo.png'}
-            text={"We believe in the power of play to foster creativity, problem-solving skills, and imagination."}
-            contact={contact}
-            navbarLinks={navLinks}
-            footerLinks={footerLinks}
-            social={socialMedia}
-          />
+          <footer>
+            <FooterComponent logo={'/assets/imgs/logo.png'}
+              text={"We believe in the power of play to foster creativity, problem-solving skills, and imagination."}
+              contact={contact}
+              navbarLinks={navLinks}
+              footerLinks={footerLinks}
+              social={socialMedia}
+            />
+          </footer>
+          <CouponPopupComponent Code={"LEARN30"}/> 
+          {/* The popup is designed to appear only once per user session */}
         </div>
       )}
     </>

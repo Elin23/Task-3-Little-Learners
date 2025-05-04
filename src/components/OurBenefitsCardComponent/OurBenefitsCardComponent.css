@@ -20,7 +20,9 @@
     gap: 20px;
     justify-content: center;
 }
-
+.base-container.awards .benefit-content{
+    justify-content: start;
+}
 .benefit-title {
     font-family: var(--headings-font-family);
 }
@@ -60,10 +62,13 @@
         height: 96px;
         gap: 16px;
     }
+    .base-container.awards .benefit-icon{
+        top: -9%;
+    }
 }
 @media (max-width: 1439px) {
     .benefit-content {
-        width: 25vw;
+        width: 23vw;
         height: 130px;
     }
 }
@@ -84,6 +89,11 @@
 
     .benefit-content {
         width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .base-container.awards .benefit-icon{
+        top: -15%;
     }
 }
 @media (max-width: 389px) {

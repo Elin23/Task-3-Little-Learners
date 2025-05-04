@@ -1,10 +1,10 @@
 import React from 'react'
 import './OurBenefitsCardComponent.css'
 import BaseContainerComponent from '../BaseContainerComponent/BaseContainerComponent'
-export default function OurBenefitsCardComponent({icon, alt, title, text}) {
+export default function OurBenefitsCardComponent({icon, alt, title, text, className=""}) {
     return (
         <>
-            <BaseContainerComponent className='benefit-card'>
+            <BaseContainerComponent className={`benefit-card ${className}`} data_aos={'flip-left'}>
                 <div className="benefit-icon">
                     <img src={icon} alt={alt} />
                 </div>
