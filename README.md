@@ -43,7 +43,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 ## Next Steps
-Currently, only the Home page is available. Future pages (About Us, Academics, Student Life, Admission, Contact) will be added shortly.
+Currently, only the Home page, About Us, Academics are available. Future pages (Student Life, Admission, Contact) will be added shortly.
 
 ## Contact
 For any inquiries or feedback, feel free to reach out to me at:
