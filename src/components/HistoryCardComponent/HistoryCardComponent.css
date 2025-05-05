@@ -18,12 +18,21 @@
 .history-text .history-label{
     font-family: var(--headings-font-family);
     color: var(--gray10-color);
+    transition: all 0.3s ease;
+}
+.history-card-container:hover .history-label{
+    color: var(--orange65-color);
 }
 .history-text .history-desc{
     color: var(--gray20-color);
 }
 .year{
     font-family: var(--headings-font-family);
+    transition: all 0.3s ease;
+}
+.history-card-container:hover .year{
+    transform: scale(1.2);
+    text-shadow: 1px 1px 2px var(--orange65-color);
 }
 .line-decoration{
     position: absolute;

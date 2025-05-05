@@ -5,7 +5,7 @@ import OurBenefitsCardComponent from '../OurBenefitsCardComponent/OurBenefitsCar
 import './FeaturesComponent.css'
 export default function FeaturesComponent() {
   return (
-    <div className='mx-162'>
+    <div className='mx-162' id='features'>
       <TitleComponent heading={"Our Features"} title={"Our Special Features"} 
                       text={"Our kinder garden school provides a nurturing and stimulating environment, fostering a love for learning that lasts a lifetime. Join us as we embark on an exciting educational journey together!"}
       />

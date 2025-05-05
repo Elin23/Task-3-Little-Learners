@@ -5,10 +5,15 @@
 }
 .MV-header h4{
     font-family: var(--headings-font-family);
+    transition: all .3s ease;
 }
 .MV-description{
     color: var(--gray20-color);
 }
+.base-container.MissionVision:hover .MV-header h4{
+    color: var(--orange65-color);
+}
+
 @media (max-width: 1919px) {
     .MV-header img{
         width: 60.43px;
